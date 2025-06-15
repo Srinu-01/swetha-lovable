@@ -137,7 +137,7 @@ const Settings = () => {
   const saveBusinessSettings = async () => {
     try {
       setSaving(true);
-      await updateDoc(doc(db, 'settings', 'business'), businessSettings);
+      await updateDoc(doc(db, 'settings', 'business'), businessSettings as any);
       toast({
         title: "Success",
         description: "Business settings saved successfully",
@@ -157,7 +157,7 @@ const Settings = () => {
   const saveNotificationSettings = async () => {
     try {
       setSaving(true);
-      await updateDoc(doc(db, 'settings', 'notifications'), notificationSettings);
+      await updateDoc(doc(db, 'settings', 'notifications'), notificationSettings as any);
       toast({
         title: "Success",
         description: "Notification settings saved successfully",
